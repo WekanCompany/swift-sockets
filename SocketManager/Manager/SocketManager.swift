@@ -10,7 +10,6 @@ import Foundation
 import SocketIO
 
 class SocketIOManager: NSObject {
-    
     static let manager = SocketManager(socketURL: URL(string: SocketIOManager.getSocketBaseUrl())!, config: [.log(true), .connectParams(["token" : SocketIOManager.getToken()])])
     static let socket = manager.defaultSocket
 

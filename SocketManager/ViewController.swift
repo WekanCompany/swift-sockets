@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     //MARK: - IBOutlets
 
     @IBOutlet weak var lblStatus: UILabel!
@@ -22,15 +21,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.title = "Socket Manager"
-        
-        initializeView()
-    }
-    
-    // MARK: - Initialize
-    
-    /** InitializeView */
-    private func initializeView() {
-        
     }
     
     // MARK: - UIButton action
@@ -53,7 +43,6 @@ class ViewController: UIViewController {
     
     @IBAction func listenJobs(_ sender: UIButton) {
         SocketIOManager.listenNearMeJobs { (response) in
-            //print("isValid JSON \(JSONSerialization.isValidJSONObject(response))")
             print("response -> \(response)")
         }
     }
